@@ -1,0 +1,18 @@
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+
+<script>
+$(document).ready(function () {
+    $("#submit").click(function(event){
+        $('#submit').val('Processing …');
+        $('SubmitForm').submit();
+    });
+  $('form').submit(function(event){
+       alert("form submitted");
+       $('#submit').val('submitted');
+    });
+});
+</script>
+<form  id="SubmitForm" action="/scripts/t.php" method="POST" enctype="multipart/form-data" accept-charset="utf-8" data-abide >
+ <input  type="submit" value="Submit"  id='submit'>
+
+</form>
