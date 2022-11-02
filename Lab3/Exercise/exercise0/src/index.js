@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import MyButton from './components/exercise1/exercise12/MyButton';
-import MyList from './components/exercise1/exercise12/MyList'
+// import MyButton from './components/exercise1/exercise12/MyButton';
+// import MyList from './components/exercise1/exercise12/MyList'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
