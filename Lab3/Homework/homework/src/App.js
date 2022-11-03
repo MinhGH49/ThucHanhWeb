@@ -6,6 +6,7 @@ import DrumContainer from './containers/drum'
 function App() {
   return (
     <>
+      <h1>Homework</h1>
       <DrumContainer/>
     </>
   );

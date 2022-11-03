@@ -1,16 +1,16 @@
-body {
+.drum-container {
 	text-align: center;
 	background-color: #a06060;
 }
 
-h1 {
+.drum-container h1 {
 	font-size: 5rem;
 	color: #DBEDF3;
 	font-family: roboto;
 	text-shadow: 3px 0 #DA0463;
 }
 
-li {
+.drum-container li {
 	outline: none;
 	border: 10px solid #404B69;
 	font-size: 5rem;

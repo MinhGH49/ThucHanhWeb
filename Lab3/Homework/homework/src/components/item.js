@@ -1,12 +1,20 @@
 import React from 'react';
-
-export default function Item(props) {
-  console.log(props.style)
+//
+// items = {
+//   specificStyle,
+//   text
+// }
+export default function Item(
+  {className, specificStyle, clickHandler, text}) {
+  console.log(specificStyle)
   return (
-    <li className={props.className} style={props.style} onClick={props.onClick} onKeyPress={props.onKeyPress}>{props.text}</li>
-      // <button
-
-      // </button>
+    <li
+      className={className}
+      style={specificStyle}
+      onClick={() => clickHandler(text)}
+    >
+    {text}
+    </li>
 
   )
 }

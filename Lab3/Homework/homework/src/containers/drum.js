@@ -3,7 +3,12 @@ import ItemList from '../components/itemList'
 import getDrumSylte from '../pseudoAPI/drumstyleAPI'
 import './drum.css'
 
-
+// const item = {
+//   text: letter,
+//   className: letter,
+//   bgImg: `${imgDir + letter}.png`,
+//   sound: mp3Dir + `/${letter}.mp3`
+// }
 
 const fetchData = () => {
   return getDrumSylte();
@@ -12,41 +17,32 @@ const fetchData = () => {
 
 export default function DrumContainer() {
 
-
+  //text handler nhan text cua button
+  const clickHandler = (buttonText) => {
+    console.log(buttonText)
+  }
   const apiData = fetchData()
+
+  //items data inferred from api data
   const items = []
   apiData.map((value) => {
-    let audio = new Audio(value.sound)
-
-
-
     const item = {
-      id:value.id,
-      style: {backgroundImage: value.bgImg},
-      onClick: () => {
-        audio.play()
-        audio.currentTime = 0;
-        console.log("clicked")
-      },
-      onKeyPress: (e) => {
-        if (e.charCode === value.text.charCodeAt(0)){
-          audio.play()
-          audio.currentTime = 0;
-          console.log(e.charCode)
-        }
-      },
-      text: value.text,
+      className: value.className,
+      specificStyle: {backgroundImage: `url(${value.bgImg})`},
+      text:value.text,
     }
-    console.log(item)
     items.push(item)
-  }
-  );
+  })
 
 
   return (
     <div className="drum-container">
       <h1>Drum kit</h1>
-      <ItemList items={items}/>
+      <ItemList
+        listClassName={'drum-keys'}
+        items={items}
+        clickHandler={clickHandler}
+      />
     </div>
   )
 
