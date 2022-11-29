@@ -6,31 +6,31 @@
   display: flex;
 }
 
-.VideoFooter-text {
+.VideoFooter__text {
   flex: 1;
 }
 
-.VideoFooter-text > h3{
+.VideoFooter__text > h3{
   padding-bottom: 20px;
 }
 
-.VideoFooter-text > p{
+.VideoFooter__text > p{
   padding-bottom: 20px;
 }
 
-.VideoFooter-icon{
+.VideoFooter__icon{
   position: absolute;
 }
 
-.VideoFooter-ticker > .ticker{
+.VideoFooter__ticker > .ticker{
   height: fit-content;
   margin-left: 30px;
   width: 60%
 }
 
-.VideoFooter-record{
+.VideoFooter__record{
   animation: spinTheRecord infinite 5s linear;
-  height: 50px;
+  height: 100px;
   filter: invert(1);
   position: absolute;
   bottom: 0;
